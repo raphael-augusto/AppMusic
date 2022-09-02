@@ -17,6 +17,8 @@ class HomeViewControllerScreen: UIView, ConfigurableView {
         tv.showsVerticalScrollIndicator = false
         tv.translatesAutoresizingMaskIntoConstraints = false
         
+        tv.register(CardViewTableViewCell.self, forCellReuseIdentifier: CardViewTableViewCell.identifier)
+        
         return tv
     }()
 
