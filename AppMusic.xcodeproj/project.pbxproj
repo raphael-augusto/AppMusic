@@ -18,6 +18,8 @@
 		64A6F61028C0198B0033D0C8 /* NSTextAttachment + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A6F60D28C0198B0033D0C8 /* NSTextAttachment + Extension.swift */; };
 		64A6F61328C01AB20033D0C8 /* HomeViewControllerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A6F61228C01AB20033D0C8 /* HomeViewControllerScreen.swift */; };
 		64A6F61728C1A1A70033D0C8 /* ConfigurableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A6F61628C1A1A70033D0C8 /* ConfigurableView.swift */; };
+		64A6F61A28C1A9ED0033D0C8 /* CardViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A6F61928C1A9ED0033D0C8 /* CardViewTableViewCell.swift */; };
+		64A6F61D28C2317E0033D0C8 /* CustomCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A6F61C28C2317E0033D0C8 /* CustomCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		64A6F60D28C0198B0033D0C8 /* NSTextAttachment + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTextAttachment + Extension.swift"; sourceTree = "<group>"; };
 		64A6F61228C01AB20033D0C8 /* HomeViewControllerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerScreen.swift; sourceTree = "<group>"; };
 		64A6F61628C1A1A70033D0C8 /* ConfigurableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableView.swift; sourceTree = "<group>"; };
+		64A6F61928C1A9ED0033D0C8 /* CardViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewTableViewCell.swift; sourceTree = "<group>"; };
+		64A6F61C28C2317E0033D0C8 /* CustomCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,9 +70,11 @@
 		64A6F5F228C015EE0033D0C8 /* AppMusic */ = {
 			isa = PBXGroup;
 			children = (
+				64A6F61B28C2315B0033D0C8 /* CustomView */,
 				64A6F61528C1A17E0033D0C8 /* Utility */,
 				64A6F60A28C0198B0033D0C8 /* Extension */,
 				64A6F60728C018D60033D0C8 /* Model */,
+				64A6F61828C1A9CD0033D0C8 /* Cell */,
 				64A6F61128C01A830033D0C8 /* Home */,
 				64A6F5F328C015EE0033D0C8 /* AppDelegate.swift */,
 				64A6F5F528C015EE0033D0C8 /* SceneDelegate.swift */,
@@ -120,6 +126,22 @@
 				64A6F61628C1A1A70033D0C8 /* ConfigurableView.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		64A6F61828C1A9CD0033D0C8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				64A6F61928C1A9ED0033D0C8 /* CardViewTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		64A6F61B28C2315B0033D0C8 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				64A6F61C28C2317E0033D0C8 /* CustomCardView.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,7 +218,9 @@
 				64A6F61328C01AB20033D0C8 /* HomeViewControllerScreen.swift in Sources */,
 				64A6F5F828C015EE0033D0C8 /* HomeViewController.swift in Sources */,
 				64A6F61728C1A1A70033D0C8 /* ConfigurableView.swift in Sources */,
+				64A6F61A28C1A9ED0033D0C8 /* CardViewTableViewCell.swift in Sources */,
 				64A6F61028C0198B0033D0C8 /* NSTextAttachment + Extension.swift in Sources */,
+				64A6F61D28C2317E0033D0C8 /* CustomCardView.swift in Sources */,
 				64A6F60F28C0198B0033D0C8 /* UIView + Extension.swift in Sources */,
 				64A6F5F428C015EE0033D0C8 /* AppDelegate.swift in Sources */,
 				64A6F60E28C0198B0033D0C8 /* NSAttributedString + Extension.swift in Sources */,
