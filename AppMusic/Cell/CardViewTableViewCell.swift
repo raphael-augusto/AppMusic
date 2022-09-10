@@ -13,7 +13,7 @@ class CardViewTableViewCell: UITableViewCell, ConfigurableView  {
     
     //MARK: - Elements Visual
     private lazy var cardView: CustomCardView = {
-        let view            = CustomCardView()
+        let view            = CustomCardView(mode: .card)
         view.clipsToBounds  = true
         view.translatesAutoresizingMaskIntoConstraints = false
         
