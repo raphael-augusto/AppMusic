@@ -43,7 +43,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     //Redirecting to another screen
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let VC = DetailViewController()
+        VC.cardModel = CardData[indexPath.row]
+        VC.modalPresentationStyle = .fullScreen
+        present(VC, animated: true, completion: nil)
     }
     
     
