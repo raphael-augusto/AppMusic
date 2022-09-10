@@ -15,7 +15,6 @@ enum ViewMode {
 class CustomCardView: UIView, ConfigurableView {
     
     //MARK: - Properties
-    var vmode: ViewMode?
     var dataModel:CardViewModel?
     
     var containerLeadingConstraints: NSLayoutConstraint?
@@ -25,7 +24,7 @@ class CustomCardView: UIView, ConfigurableView {
 
     
     //MARK: - Elements Visual
-    private lazy var cardContainerView: UIView = {
+    lazy var cardContainerView: UIView = {
         let view                    = UIView()
         view.layer.cornerRadius     = 30
         view.layer.shadowOpacity    = 1
@@ -37,7 +36,7 @@ class CustomCardView: UIView, ConfigurableView {
         return view
     }()
     
-    private lazy var cardImage: UIImageView = {
+    lazy var cardImage: UIImageView = {
         let image               = UIImageView()
         image.contentMode       = .scaleAspectFill
         image.backgroundColor   = .black
@@ -46,7 +45,7 @@ class CustomCardView: UIView, ConfigurableView {
         return image
     }()
     
-    private lazy var overlayView: UIView = {
+    lazy var overlayView: UIView = {
         let view               = UIView()
         view.backgroundColor   = UIColor.black.withAlphaComponent(0.6)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -54,7 +53,7 @@ class CustomCardView: UIView, ConfigurableView {
         return view
     }()
     
-    private lazy var profileBorderView: UIView = {
+    lazy var profileBorderView: UIView = {
         let view                = UIView()
         view.backgroundColor    = .clear
         view.layer.borderWidth  = 1
@@ -65,7 +64,7 @@ class CustomCardView: UIView, ConfigurableView {
         return view
     }()
     
-    private lazy var cardProfilePicture: UIImageView = {
+    lazy var cardProfilePicture: UIImageView = {
         let image                = UIImageView()
         image.contentMode        = .scaleAspectFill
         image.backgroundColor    = .black
@@ -76,7 +75,7 @@ class CustomCardView: UIView, ConfigurableView {
         return image
     }()
     
-    private lazy var addProfileImageButton: UIButton = {
+    lazy var addProfileImageButton: UIButton = {
         let button                  = UIButton()
         button.backgroundColor      = .white
         button.layer.cornerRadius   = 10
@@ -86,7 +85,7 @@ class CustomCardView: UIView, ConfigurableView {
         return button
     }()
     
-    private lazy var cardCategoryTitleLabel: UILabel = {
+    lazy var cardCategoryTitleLabel: UILabel = {
         let label       = UILabel()
         label.font      = UIFont.systemFont(ofSize: 12, weight: .bold)
         label.textColor = .white
@@ -95,7 +94,7 @@ class CustomCardView: UIView, ConfigurableView {
         return label
     }()
     
-    private lazy var cardCategoryDateLabel: UILabel = {
+    lazy var cardCategoryDateLabel: UILabel = {
         let label       = UILabel()
         label.font      = UIFont.systemFont(ofSize: 11, weight: .regular)
         label.textColor = .white
@@ -104,7 +103,7 @@ class CustomCardView: UIView, ConfigurableView {
         return label
     }()
     
-    private lazy var cardTitleLabel: UILabel = {
+    lazy var cardTitleLabel: UILabel = {
         let label           = UILabel()
         label.font          = UIFont.systemFont(ofSize: 31, weight: .bold)
         label.textColor     = .white
@@ -114,14 +113,14 @@ class CustomCardView: UIView, ConfigurableView {
         return label
     }()
     
-    private lazy var likeAndTimeLabel: UILabel = {
+    lazy var likeAndTimeLabel: UILabel = {
         let label           = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
     }()
     
-    private lazy var descriptionTitleLabel: UILabel = {
+    lazy var descriptionTitleLabel: UILabel = {
         let label           = UILabel()
         label.font          = UIFont.systemFont(ofSize: 16, weight: .regular)
         label.textColor     = .white
@@ -132,7 +131,7 @@ class CustomCardView: UIView, ConfigurableView {
         return label
     }()
     
-    private lazy var actionsView: CardActionView = {
+    lazy var actionsView: CardActionView = {
         let card = CardActionView()
         card.translatesAutoresizingMaskIntoConstraints = false
         
@@ -141,11 +140,12 @@ class CustomCardView: UIView, ConfigurableView {
     
     
     //MARK: - Init
-    init() {
+    init(mode: ViewMode) {
         let frame = CGRect.zero
         super.init(frame: frame)
         
         setup()
+        updateLayout(for: mode)
     }
     
     required init?(coder: NSCoder) {
@@ -176,8 +176,6 @@ extension CustomCardView {
         cardContainerView.addSubview(likeAndTimeLabel)
         cardContainerView.addSubview(descriptionTitleLabel)
         cardContainerView.addSubview(actionsView)
-        
-        updateLayout(for: vmode ?? .card)
     }
 
     
@@ -253,7 +251,7 @@ extension CustomCardView {
             self.descriptionTitleLabel.isHidden         = true
         }
         
-        //layout Card
+        // Layout Card
         actionsView.updateLayout(for: mode)
     }
     
