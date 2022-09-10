@@ -53,6 +53,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64A1A74228CC23E0003EFFCA /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				64A6F5F328C015EE0033D0C8 /* AppDelegate.swift */,
+				64A6F5F528C015EE0033D0C8 /* SceneDelegate.swift */,
+				64A6F5FC28C015F00033D0C8 /* Assets.xcassets */,
+				64A6F5FE28C015F00033D0C8 /* LaunchScreen.storyboard */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		64A6F5E728C015EE0033D0C8 = {
 			isa = PBXGroup;
 			children = (
@@ -78,10 +89,7 @@
 				64A6F60728C018D60033D0C8 /* Model */,
 				64A6F61828C1A9CD0033D0C8 /* Cell */,
 				64A6F61128C01A830033D0C8 /* Home */,
-				64A6F5F328C015EE0033D0C8 /* AppDelegate.swift */,
-				64A6F5F528C015EE0033D0C8 /* SceneDelegate.swift */,
-				64A6F5FC28C015F00033D0C8 /* Assets.xcassets */,
-				64A6F5FE28C015F00033D0C8 /* LaunchScreen.storyboard */,
+				64A1A74228CC23E0003EFFCA /* Support */,
 				64A6F60128C015F00033D0C8 /* Info.plist */,
 			);
 			path = AppMusic;
