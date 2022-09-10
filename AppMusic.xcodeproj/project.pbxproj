@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64A1A74528CC33CB003EFFCA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1A74428CC33CB003EFFCA /* DetailViewController.swift */; };
+		64A1A74828CC3416003EFFCA /* DetailViewControllerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1A74728CC3416003EFFCA /* DetailViewControllerScreen.swift */; };
 		64A6F5F428C015EE0033D0C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A6F5F328C015EE0033D0C8 /* AppDelegate.swift */; };
 		64A6F5F628C015EE0033D0C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A6F5F528C015EE0033D0C8 /* SceneDelegate.swift */; };
 		64A6F5F828C015EE0033D0C8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A6F5F728C015EE0033D0C8 /* HomeViewController.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		64A1A74428CC33CB003EFFCA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		64A1A74728CC3416003EFFCA /* DetailViewControllerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerScreen.swift; sourceTree = "<group>"; };
 		64A6F5F028C015EE0033D0C8 /* AppMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64A6F5F328C015EE0033D0C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64A6F5F528C015EE0033D0C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +68,23 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
+		64A1A74328CC3380003EFFCA /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				64A1A74628CC33E5003EFFCA /* Screen */,
+				64A1A74428CC33CB003EFFCA /* DetailViewController.swift */,
+			);
+			path = DetailViewController;
+			sourceTree = "<group>";
+		};
+		64A1A74628CC33E5003EFFCA /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				64A1A74728CC3416003EFFCA /* DetailViewControllerScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		64A6F5E728C015EE0033D0C8 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +110,7 @@
 				64A6F60728C018D60033D0C8 /* Model */,
 				64A6F61828C1A9CD0033D0C8 /* Cell */,
 				64A6F61128C01A830033D0C8 /* Home */,
+				64A1A74328CC3380003EFFCA /* DetailViewController */,
 				64A1A74228CC23E0003EFFCA /* Support */,
 				64A6F60128C015F00033D0C8 /* Info.plist */,
 			);
@@ -225,6 +247,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64A1A74828CC3416003EFFCA /* DetailViewControllerScreen.swift in Sources */,
+				64A1A74528CC33CB003EFFCA /* DetailViewController.swift in Sources */,
 				64A6F60928C018D60033D0C8 /* CardViewModel.swift in Sources */,
 				64A6F61328C01AB20033D0C8 /* HomeViewControllerScreen.swift in Sources */,
 				64A6F61F28C2950D0033D0C8 /* CardActionView.swift in Sources */,
