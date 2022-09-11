@@ -53,6 +53,8 @@ class DetailViewControllerScreen: UIView, ConfigurableView {
         tv.contentInset                 = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
         tv.translatesAutoresizingMaskIntoConstraints = false
         
+        tv.register(DetailTableViewCell.self, forCellReuseIdentifier: DetailTableViewCell.identifier)
+        
         return tv
     }()
     

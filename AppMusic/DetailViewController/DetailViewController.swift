@@ -44,11 +44,19 @@ extension DetailViewController: DetailViewControllerScreenDelegate {
 extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return self.cardModel?.cardList?.count ?? 0
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: DetailTableViewCell.identifier, for: indexPath) as? DetailTableViewCell
+        cell?.setupCell(data: self.cardModel?.cardList?[indexPath.row] ?? CardListModel())
+        
+        return cell ?? UITableViewCell()
     }
 
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
 }
