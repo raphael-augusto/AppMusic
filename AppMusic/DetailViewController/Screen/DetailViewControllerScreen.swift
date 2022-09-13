@@ -44,6 +44,16 @@ class DetailViewControllerScreen: UIView, ConfigurableView {
         return card
     }()
     
+    private lazy var navBar: CustomNavBar = {
+        let nb = CustomNavBar()
+        nb.backgroundColor = .black
+        nb.translatesAutoresizingMaskIntoConstraints = false
+        
+        nb.setupView(data: self.cardModel ?? CardViewModel())
+        
+        return nb
+    }()
+    
     private lazy var tableView: UITableView = {
         let tv                          = UITableView()
         tv.tableFooterView              = UIView()
@@ -100,6 +110,7 @@ extension DetailViewControllerScreen {
         addSubview(scrollView)
         scrollView.addSubview(cardView)
         scrollView.addSubview(tableView)
+        addSubview(navBar)
         addSubview(closeButton)
     }
     
@@ -132,7 +143,14 @@ extension DetailViewControllerScreen {
             closeButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             closeButton.widthAnchor.constraint(equalToConstant: 30),
             closeButton.heightAnchor.constraint(equalToConstant: 30),
+            
+            navBar.leadingAnchor.constraint(equalTo: leadingAnchor),
+            navBar.trailingAnchor.constraint(equalTo: trailingAnchor),
+            navBar.heightAnchor.constraint(equalToConstant: ((topPadding ?? 0.0) + 80))
         ])
+        
+        self.navBarTopAnchor = self.navBar.topAnchor.constraint(equalTo: self.topAnchor, constant: -((topPadding ?? 0.0) + 60))
+        self.navBarTopAnchor?.isActive = true
     }
 }
 
