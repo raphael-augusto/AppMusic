@@ -7,10 +7,17 @@
 
 import UIKit
 
+enum StateAnimation {
+    case long
+    case short
+}
+
 class DetailViewController: UIViewController {
     
     var screen: DetailViewControllerScreen?
     var cardModel:CardViewModel?
+    
+    var valueAnimation: StateAnimation = .long
     
     
     override func loadView() {
@@ -30,6 +37,13 @@ class DetailViewController: UIViewController {
     }
     
     
+    private func animationWithView() {
+        UIView.animate(withDuration: 0.3, delay: 0,options: .curveEaseOut) {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let window = UIApplication.shared.connectedScenes
             .filter({$0.activationState == .foregroundActive})
@@ -41,12 +55,22 @@ class DetailViewController: UIViewController {
         
         if scrollView.contentOffset.y >= 300 {
             self.screen?.navBarTopAnchor?.constant = 0
+            
+            if valueAnimation == .long {
+                self.animationWithView()
+            }
+            
+            self.valueAnimation = .short
+            
         } else {
+            
             self.screen?.navBarTopAnchor?.constant = -((topPadding ?? 0.0) + 80)
-        }
-        
-        UIView.animate(withDuration: 0.3, delay: 0,options: .curveEaseOut) {
-            self.view.layoutIfNeeded()
+            
+            if valueAnimation == .short {
+                self.animationWithView()
+            }
+            
+            self.valueAnimation = .long
         }
     }
 }
