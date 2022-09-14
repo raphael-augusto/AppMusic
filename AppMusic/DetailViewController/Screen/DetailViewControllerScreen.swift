@@ -16,6 +16,7 @@ class DetailViewControllerScreen: UIView, ConfigurableView {
     //MARK: - Properties
     var cardModel:CardViewModel?
     var navBarTopAnchor: NSLayoutConstraint?
+    var playerViewBottomAnchor: NSLayoutConstraint?
     
 
     //MARK: - Properties Delegate
@@ -80,6 +81,13 @@ class DetailViewControllerScreen: UIView, ConfigurableView {
         return button
     }()
     
+    lazy var playerView: CustomPlayerView = {
+        let pv = CustomPlayerView()
+        pv.translatesAutoresizingMaskIntoConstraints = false
+        
+        return pv
+    }()
+    
     
     //MARK: - Init
     init(dataView:CardViewModel?) {
@@ -112,6 +120,7 @@ extension DetailViewControllerScreen {
         scrollView.addSubview(tableView)
         addSubview(navBar)
         addSubview(closeButton)
+        addSubview(playerView)
     }
     
     func initConstraints() {
@@ -146,11 +155,18 @@ extension DetailViewControllerScreen {
             
             navBar.leadingAnchor.constraint(equalTo: leadingAnchor),
             navBar.trailingAnchor.constraint(equalTo: trailingAnchor),
-            navBar.heightAnchor.constraint(equalToConstant: ((topPadding ?? 0.0) + 80))
+            navBar.heightAnchor.constraint(equalToConstant: ((topPadding ?? 0.0) + 80)),
+            
+            playerView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            playerView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            playerView.heightAnchor.constraint(equalToConstant: 120),
         ])
         
         self.navBarTopAnchor = self.navBar.topAnchor.constraint(equalTo: self.topAnchor, constant: -((topPadding ?? 0.0) + 60))
         self.navBarTopAnchor?.isActive = true
+        
+        self.playerViewBottomAnchor = self.playerView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 120)
+        self.playerViewBottomAnchor?.isActive = true
     }
 }
 
