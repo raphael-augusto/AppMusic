@@ -8,5 +8,11 @@ target 'AppMusic' do
   # Pods for AppMusic
 
 pod 'MarqueeLabel'
+pod 'Firebase/Auth'
+pod 'Firebase/Core'
+pod 'Firebase/Firestore'
+pod 'Firebase/Storage'
+pod 'FirebaseUI/Storage'
+
 
 end

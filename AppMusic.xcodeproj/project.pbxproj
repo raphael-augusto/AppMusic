@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		646369FA28D2983B0068D413 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646369F928D2983B0068D413 /* LoginViewController.swift */; };
+		646369FC28D298560068D413 /* LoginScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646369FB28D298560068D413 /* LoginScreenView.swift */; };
+		646369FE28D431DC0068D413 /* UITextField + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646369FD28D431DC0068D413 /* UITextField + Extension.swift */; };
+		64636A0128D7A1F70068D413 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64636A0028D7A1F70068D413 /* Alert.swift */; };
+		64636A0528D7A8510068D413 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64636A0428D7A8510068D413 /* RegisterViewController.swift */; };
+		64636A0728D7AAA50068D413 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64636A0628D7AAA50068D413 /* RegisterScreen.swift */; };
+		64636A0928D7F3E70068D413 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64636A0828D7F3E70068D413 /* GoogleService-Info.plist */; };
 		6488E8C528D279D40005C874 /* CustomPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6488E8C428D279D40005C874 /* CustomPlayerView.swift */; };
 		64A1A74528CC33CB003EFFCA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1A74428CC33CB003EFFCA /* DetailViewController.swift */; };
 		64A1A74828CC3416003EFFCA /* DetailViewControllerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1A74728CC3416003EFFCA /* DetailViewControllerScreen.swift */; };
@@ -33,6 +40,13 @@
 /* Begin PBXFileReference section */
 		12E772BA0C999B60604B027F /* Pods-AppMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppMusic.debug.xcconfig"; path = "Target Support Files/Pods-AppMusic/Pods-AppMusic.debug.xcconfig"; sourceTree = "<group>"; };
 		4EE47FDC6C433826BE2DD38C /* Pods-AppMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppMusic.release.xcconfig"; path = "Target Support Files/Pods-AppMusic/Pods-AppMusic.release.xcconfig"; sourceTree = "<group>"; };
+		646369F928D2983B0068D413 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		646369FB28D298560068D413 /* LoginScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenView.swift; sourceTree = "<group>"; };
+		646369FD28D431DC0068D413 /* UITextField + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField + Extension.swift"; sourceTree = "<group>"; };
+		64636A0028D7A1F70068D413 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		64636A0428D7A8510068D413 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		64636A0628D7AAA50068D413 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
+		64636A0828D7F3E70068D413 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6488E8C428D279D40005C874 /* CustomPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPlayerView.swift; sourceTree = "<group>"; };
 		64A1A74428CC33CB003EFFCA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		64A1A74728CC3416003EFFCA /* DetailViewControllerScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerScreen.swift; sourceTree = "<group>"; };
@@ -77,6 +91,48 @@
 				4EE47FDC6C433826BE2DD38C /* Pods-AppMusic.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		646369F728D298090068D413 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				646369F828D298190068D413 /* Screen */,
+				646369F928D2983B0068D413 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		646369F828D298190068D413 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				646369FB28D298560068D413 /* LoginScreenView.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		646369FF28D7A1D90068D413 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				64636A0028D7A1F70068D413 /* Alert.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		64636A0228D7A7F00068D413 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				64636A0328D7A8320068D413 /* Screen */,
+				64636A0428D7A8510068D413 /* RegisterViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		64636A0328D7A8320068D413 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				64636A0628D7AAA50068D413 /* RegisterScreen.swift */,
+			);
+			path = Screen;
 			sourceTree = "<group>";
 		};
 		64A1A74228CC23E0003EFFCA /* Support */ = {
@@ -146,6 +202,7 @@
 		64A6F5F228C015EE0033D0C8 /* AppMusic */ = {
 			isa = PBXGroup;
 			children = (
+				646369FF28D7A1D90068D413 /* Alert */,
 				64A6F61B28C2315B0033D0C8 /* CustomView */,
 				64A6F61528C1A17E0033D0C8 /* Utility */,
 				64A6F60A28C0198B0033D0C8 /* Extension */,
@@ -153,7 +210,10 @@
 				64A6F61828C1A9CD0033D0C8 /* Cell */,
 				64A6F61128C01A830033D0C8 /* Home */,
 				64A1A74328CC3380003EFFCA /* DetailViewController */,
+				646369F728D298090068D413 /* Login */,
+				64636A0228D7A7F00068D413 /* Register */,
 				64A1A74228CC23E0003EFFCA /* Support */,
+				64636A0828D7F3E70068D413 /* GoogleService-Info.plist */,
 				64A6F60128C015F00033D0C8 /* Info.plist */,
 			);
 			path = AppMusic;
@@ -173,6 +233,7 @@
 				64A6F60B28C0198B0033D0C8 /* NSAttributedString + Extension.swift */,
 				64A6F60C28C0198B0033D0C8 /* UIView + Extension.swift */,
 				64A6F60D28C0198B0033D0C8 /* NSTextAttachment + Extension.swift */,
+				646369FD28D431DC0068D413 /* UITextField + Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -291,6 +352,7 @@
 			files = (
 				64A6F60028C015F00033D0C8 /* LaunchScreen.storyboard in Resources */,
 				64A6F5FD28C015F00033D0C8 /* Assets.xcassets in Resources */,
+				64636A0928D7F3E70068D413 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,16 +405,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				646369FC28D298560068D413 /* LoginScreenView.swift in Sources */,
 				64A1A74E28CD6AF5003EFFCA /* DetailTableViewCellScreen.swift in Sources */,
 				64A1A74828CC3416003EFFCA /* DetailViewControllerScreen.swift in Sources */,
 				64A1A74528CC33CB003EFFCA /* DetailViewController.swift in Sources */,
 				64A6F60928C018D60033D0C8 /* CardViewModel.swift in Sources */,
+				646369FA28D2983B0068D413 /* LoginViewController.swift in Sources */,
 				64A1A74B28CD6A5A003EFFCA /* DetailTableViewCell.swift in Sources */,
 				64A6F61328C01AB20033D0C8 /* HomeViewControllerScreen.swift in Sources */,
+				64636A0128D7A1F70068D413 /* Alert.swift in Sources */,
+				646369FE28D431DC0068D413 /* UITextField + Extension.swift in Sources */,
 				6488E8C528D279D40005C874 /* CustomPlayerView.swift in Sources */,
 				64A6F61F28C2950D0033D0C8 /* CardActionView.swift in Sources */,
+				64636A0728D7AAA50068D413 /* RegisterScreen.swift in Sources */,
 				64A6F5F828C015EE0033D0C8 /* HomeViewController.swift in Sources */,
 				64A6F61728C1A1A70033D0C8 /* ConfigurableView.swift in Sources */,
+				64636A0528D7A8510068D413 /* RegisterViewController.swift in Sources */,
 				64A1A75028CF9B0D003EFFCA /* CustomNavBar.swift in Sources */,
 				64A6F61A28C1A9ED0033D0C8 /* CardViewTableViewCell.swift in Sources */,
 				64A6F61028C0198B0033D0C8 /* NSTextAttachment + Extension.swift in Sources */,
